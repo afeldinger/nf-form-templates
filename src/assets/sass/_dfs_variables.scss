@@ -1,0 +1,44 @@
+
+
+// Colors
+
+$color-bg-main: #3c3a3d;
+$color-bg-2: #312f32;
+
+$color-txt-1: #fff;
+$color-txt-2: #808080;
+
+$color-txt-main: $color-txt-1;
+$color-txt-field: #4d4d4d;
+
+$color-alt: #4d4d4d;
+
+$color-bg-header: #fff;
+
+
+// Typography sizes:
+
+$size-xl: 24px;
+$size-lg: 18px;
+$size-md: 14px;
+$size-sm: 12px;
+$size-xs: 10px;
+
+$base-font-size: $size-md;
+
+$weight-bold: 700;
+$weight-normal: 400;
+
+
+
+// Grid
+
+$max-content-width: 790px;
+
+$bp-lg: $max-content-width / $base-font-size * 1em;
+$bp-md: 40em;
+$bp-sm: 25em;
+
+$margin-h: 2rem;
+$margin-v: 2rem;
+

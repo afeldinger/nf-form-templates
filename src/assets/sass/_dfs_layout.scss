@@ -1,0 +1,45 @@
+
+.brand-header {
+	background: $color-bg-header;
+	padding: 10px;
+
+	h1 {
+		margin:0;
+		padding:0;
+	}
+	
+	.header-logo {
+		img {
+			display:block;
+		}
+	}
+
+	.header-name {
+		display:none;
+	}
+}
+
+.hero {
+	img {
+		display:block;
+		width: 100%;
+	}
+}
+
+.center-box {
+	display:inline-block;
+	padding: 1em $margin-h;
+	margin: $margin-v auto;
+	background: $color-bg-2;
+
+	@include rem(max-width, $max-content-width);
+
+	.hero + & {
+		margin-top: 0;
+
+		@media (min-width: $bp-md) {
+			margin-top: -1.5 * $margin-v;
+		} 
+		
+	}
+}

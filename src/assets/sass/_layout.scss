@@ -1,0 +1,80 @@
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+	background: $color-bg-main;
+	color: $color-txt-main;
+
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+img {
+	max-width: 100%;
+	border: 0;
+}
+
+.main-content {
+	margin: $margin-v auto;
+	padding: 0 $margin-h;
+	@include rem(max-width, $max-content-width);
+
+	text-align:left;
+
+}
+
+.content-section {
+	margin-top: 1.6em;
+
+	> *:first-child {
+		margin-top:0;
+	}
+
+	img {
+		display:block;
+		margin: 1.6em auto;
+		max-width: 100%;
+
+		p > &:first-child {
+			margin-top:0;
+		}
+		p > &:last-child {
+			margin-bottom:0;
+		}
+	}
+
+}
+
+@media (min-width: $bp-md) {
+
+	.content-header,
+	.content-footer {
+		clear:both;
+		float:none;
+	}
+
+	.content-section-2,
+	.content-section-4 {
+		display:inline;
+		float:left;
+		width:45%;
+		margin-right: -100%;
+		clear:left;
+	}
+	.content-section-1,
+	.content-section-3 {
+		display:inline;
+		float:right;
+		width:45%;
+		clear:right;
+	}
+}

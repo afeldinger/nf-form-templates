@@ -17,8 +17,8 @@ module.exports = function(grunt) {
       },
       images: {
         files: ['src/assets/img/**/*.{png,jpg,gif}'],
-        //tasks: ['imagemin'],
-        tasks: ['copy:images'],
+        tasks: ['imagemin'],
+        //tasks: ['copy:images'],
         options: {
           spawn: false,
         }
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         layoutdir: 'src/templates/layouts',
-        layout: 'section.hbs',
+        layout: 'default.hbs',
         partials: ['src/templates/partials/**/*.hbs'],
         assets: './src/assets',
         helpers: [
@@ -243,6 +243,14 @@ module.exports = function(grunt) {
             files: {
                 'dist/assets/css/default.css': 'dist/assets/css/default.css',
             },
+
+            files: [{
+                expand: true,
+                cwd: 'dist/assets/css/',
+                src: '*.css',
+                dest: 'dist/assets/css/'
+            }],
+
         },
     },
 
@@ -301,7 +309,7 @@ module.exports = function(grunt) {
     },
 
     useminPrepare: {
-      html: 'dist/single-page.html',
+      html: 'dist/*.html',
     },
 
     usemin: {
@@ -341,7 +349,7 @@ module.exports = function(grunt) {
   require('matchdep').filterDev(['grunt-*', 'assemble']).forEach(grunt.loadNpmTasks);
 
 
-  grunt.registerTask('common', ['assemble', 'prettify', 'sass:dev', 'autoprefixer', 'svgstore', 'svgmin', 'copy:images', 'copy:assets']);
+  grunt.registerTask('common', ['assemble', 'prettify', 'sass:dev', 'autoprefixer', 'svgstore', 'svgmin', 'imagemin', 'copy:assets']);
 
   // Default task(s).
   grunt.registerTask('default', ['clean:dist', 'common', 'watch']);
@@ -358,7 +366,7 @@ module.exports = function(grunt) {
     'cssmin',
     'uglify',
     'usemin',
-    'replace:dist',
+    //'replace:dist',
   ]);
 
 };
