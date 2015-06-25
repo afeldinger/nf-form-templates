@@ -290,6 +290,7 @@ module.exports = function(grunt) {
             cwd: 'src/assets/js/libs/', 
             src: [
               'jquery-1.*.min.js',
+              'jquery-validate/localization/*.min.js',
             ],
             dest: 'dist/assets/js/libs',
           }

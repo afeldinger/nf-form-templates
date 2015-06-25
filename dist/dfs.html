@@ -30,15 +30,15 @@
                 <h1>Hvem er manden bag de berømte Olsen Banden film, som er indbegrebet af den danske filmskat?</h1>
                 <div class="field-group inline-elements">
                     <label for="q1a1" class="field-wrapper field-wrapper-radio">
-                        <input id="q1a1" name="q1" type="radio" class="input-radio">
+                        <input id="q1a1" name="q1" type="radio" class="input-radio" required>
                         <span class="label">Carl Ottosen</span>
                     </label>
                     <label for="q1a2" class="field-wrapper field-wrapper-radio">
-                        <input id="q1a2" name="q1" type="radio" class="input-radio">
+                        <input id="q1a2" name="q1" type="radio" class="input-radio" required>
                         <span class="label">Erik Balling</span>
                     </label>
                     <label for="q1a3" class="field-wrapper field-wrapper-radio">
-                        <input id="q1a3" name="q1" type="radio" class="input-radio">
+                        <input id="q1a3" name="q1" type="radio" class="input-radio" required>
                         <span class="label">Ib Mossin</span>
                     </label>
                 </div>
@@ -53,40 +53,43 @@
                     <h2>Dine oplysninger</h2>
                     <label for="first-name" class="field-wrapper field-wrapper-text">
                         <span class="label">Fornavn</span>
-                        <input id="first-name" name="first-name" type="text" class="input-text">
+                        <input id="first-name" name="first-name" type="text" class="input-text" required>
                     </label>
                     <label for="last-name" class="field-wrapper field-wrapper-text">
                         <span class="label">Efternavn</span>
-                        <input id="last-name" name="last-name" type="text" class="input-text">
+                        <input id="last-name" name="last-name" type="text" class="input-text" required>
                     </label>
                     <label for="email" class="field-wrapper field-wrapper-text">
                         <span class="label">E-mail</span>
-                        <input id="email" name="email" type="text" class="input-text">
+                        <input id="email" name="email" type="text" class="input-text" required>
                     </label>
                     <label for="phone" class="field-wrapper field-wrapper-text">
                         <span class="label">Telefonnr.</span>
-                        <input id="phone" name="phone" type="text" class="input-text">
+                        <input id="phone" name="phone" type="text" class="input-text" required>
                     </label>
                     <h2>Din adresse</h2>
                     <label for="address" class="field-wrapper field-wrapper-text">
                         <span class="label">Adresse</span>
-                        <input id="address" name="address" type="text" class="input-text">
+                        <input id="address" name="address" type="text" class="input-text" required>
                     </label>
                     <label for="postal-code" class="field-wrapper field-wrapper-text">
                         <span class="label">Postnr.</span>
-                        <input id="postal-code" name="postal-code" type="text" class="input-text">
+                        <input id="postal-code" name="postal-code" type="text" class="input-text" required>
                     </label>
                     <label for="city" class="field-wrapper field-wrapper-text">
                         <span class="label">By</span>
-                        <input id="city" name="city" type="text" class="input-text">
+                        <input id="city" name="city" type="text" class="input-text" required>
                     </label>
                     <label for="country" class="field-wrapper field-wrapper-text">
                         <span class="label">Land</span>
-                        <input id="country" name="country" type="text" class="input-text">
+                        <input id="country" name="country" type="text" class="input-text" required>
                     </label>
                 </section>
                 <section class="content-section content-section-2">
                     <img src="assets/img/dfs_competition01.jpg" alt="billedtekst">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
                 </section>
                 <section class="content-section content-section-3">
                     <small>
@@ -113,5 +116,6 @@
         window.jQuery || document.write('<script src="../src/assets/js/libs/jquery-1.11.1.min.js"><\/script>')
         </script>
         <script src="assets/js/scripts.min.js"></script>
+        <script src="../src/assets/js/libs/jquery-validate/localization/messages_da.min.js"></script>
     </body>
 </html>

@@ -90,6 +90,8 @@
 .field-wrapper-radio,
 .field-wrapper-checkbox {
 
+		cursor: pointer;
+
 		input {
 			position: absolute;
 			visibility: hidden;
@@ -149,5 +151,29 @@ button {
 		font-size: 80%;
 		line-height: 1em;
 
+	}
+}
+
+.input-error {
+	
+	input,
+	textarea {
+		background-color: $color-error-bg;
+	}
+
+	&.field-wrapper-radio,
+	&.field-wrapper-checkbox {
+		&:before {
+			background-color: $color-error-bg;
+		}
+	}
+
+}
+
+label.error {
+	display:block;
+
+	.field-group & {
+		margin-top: $form-spacing;
 	}
 }

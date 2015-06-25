@@ -30,7 +30,7 @@
 		$(this).parents('label').toggleClass('has-value', $(this).val()!=='');
 	});
 
-	
+
 	$('label').hover(
 		function() {
 			$(this).addClass('over');
@@ -40,4 +40,49 @@
 		}
 	).filter(':has(.icon)').addClass('has-icon');
 
+
+	$('form').validate({
+		highlight: function(element, errorClass, validClass) {
+            if(element.type === 'radio') {
+                $(element.form).find('[name="' + element.name + '"]').each(function(){
+                    var $this = $(this);
+                    $this.addClass(errorClass).removeClass(validClass);
+                    $this.closest('label').addClass('input-' + errorClass);
+                });
+            } else {
+				$(element).addClass(errorClass).removeClass(validClass);
+				$(element).closest('label').addClass('input-' + errorClass);
+            }
+
+		},
+		unhighlight: function(element, errorClass, validClass) {
+            if(element.type === 'radio') {
+                $(element.form).find('[name="' + element.name + '"]').each(function(){
+                    var $this = $(this);
+                    $this.removeClass(errorClass).addClass(validClass);
+                    $this.closest('label').removeClass('input-' + errorClass);
+                });
+            } else {
+				$(element).removeClass(errorClass).addClass(validClass);
+				$(element).closest('label').removeClass('input-' + errorClass);
+			}
+		},
+
+		errorPlacement: function(error, element) {
+			if (element.is(':radio')) {
+				//if (element.attr("name") == "PhoneFirst" || element.attr("name") == "PhoneMiddle" || element.attr("name") == "PhoneLast") {
+				//error.insertAfter("#requestorPhoneLast");
+
+				error.insertAfter($(':radio[name=' + element.attr('name') + ']:last').closest('label'));
+			} else {
+				error.insertAfter(element);
+			}
+		},
+
+		/*
+		submitHandler: function() {
+
+		},
+		*/
+	});
 })();
