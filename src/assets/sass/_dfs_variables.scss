@@ -11,13 +11,16 @@ $color-txt-2: #808080;
 $color-txt-main: $color-txt-1;
 $color-txt-field: #4d4d4d;
 
-$color-alt: #4d4d4d;
+$color-alt: #ff3a13;
 
 $color-bg-header: #fff;
+
+$color-button: #fff;
 
 
 // Typography sizes:
 
+$size-xxl: 28px;
 $size-xl: 24px;
 $size-lg: 18px;
 $size-md: 14px;
@@ -30,6 +33,16 @@ $weight-bold: 700;
 $weight-normal: 400;
 
 
+// Forms
+$checkbox-md: 		15px;
+$checkbox-margin: 	7px;
+
+$form-spacing: 		7px;
+$field-padding-h: 	11px;
+$field-padding-v: 	11px;
+$button-padding-h:	18px;
+$button-padding-v:	0px;
+
 
 // Grid
 
@@ -41,4 +54,7 @@ $bp-sm: 25em;
 
 $margin-h: 2rem;
 $margin-v: 2rem;
+
+$border-radius-md: 4px;
+$border-radius-sm: 2px;
 

@@ -33,7 +33,10 @@ img {
 }
 
 .content-section {
-	margin-top: 1.6em;
+	margin-top: 3em;
+	@media (min-width: $bp-md) {
+		margin-top: 1.6em;
+	}
 
 	> *:first-child {
 		margin-top:0;

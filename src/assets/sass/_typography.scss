@@ -32,11 +32,16 @@ body {
 	line-height: 1.6em;
 }
 
+
 h1 {
 	@include rem(font-size, $size-xl);
 	font-family: $font-header;
 	font-weight: $weight-bold;
 	line-height: 1.4em;
+
+	@media (min-width: $bp-md) {
+		@include rem(font-size, $size-xxl);
+	}
 }
 
 h2 {
@@ -44,6 +49,23 @@ h2 {
 	font-family: $font-header;
 	font-weight: $weight-bold;
 	line-height: 1.4em;
+}
+
+h3 {
+	@include rem(font-size, $size-md);
+	font-family: $font-header;
+	font-weight: $weight-bold;
+	line-height: 1.4em;
+}
+
+h1,
+h2,
+h3 {
+	margin: 1em 0 .6em;
+
+	& + p {
+		margin-top: 0;
+	}
 }
 
 p,
@@ -62,6 +84,7 @@ em {
 
 small,
 .small {
-	@include rem(font-size, $size-sm);
+	@include rem(font-size, $size-xs);
+	line-height: 1.6em;
 }
 

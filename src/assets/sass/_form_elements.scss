@@ -1,2 +1,149 @@
 
 
+.field-wrapper {
+	position:relative;
+	display:block;
+
+	input,
+	textarea,
+	.label {
+		@include rem(font-size, $size-lg);
+	}
+
+	.label {
+		display: block;
+		text-align: left;
+	}
+
+	& + .field-wrapper {
+		margin-top: $form-spacing;
+	}
+}
+
+
+
+.inline-elements {
+	display: inline-block;
+	clear:both;
+
+
+	@media (min-width: $bp-sm) {
+
+		display:block;
+
+		.field-wrapper {
+			display: inline-block;
+			margin-right: 1.5rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+
+
+.field-wrapper-text {
+
+	input,
+	textarea {
+	  	width:100%;
+		padding: $field-padding-v $field-padding-h;
+		outline: none;
+		border-radius: $border-radius-md;
+		border:0;
+		margin:0;
+		color: $color-txt-field;
+	}
+
+	.label {
+		position:absolute;
+		top:$field-padding-v;
+		left:$field-padding-h;
+		transition: top .1s, font-size .1s, opacity .1s;
+		color: $color-txt-field;
+
+	}
+
+	&.focus,
+	&.has-value {
+		.label {
+			top:-2px;
+			opacity: .5;
+			@include rem(font-size, $size-xs);
+		}
+	}
+
+}
+
+.field-wrapper-textarea {
+	@extend .field-wrapper-text;
+
+	textarea {
+		display:block;
+		height:120px;
+	}
+}
+
+
+.field-wrapper-radio,
+.field-wrapper-checkbox {
+
+		input {
+			position: absolute;
+			visibility: hidden;
+		}
+
+		.label {
+
+			@include rem(padding-left, $checkbox-md + $checkbox-margin);
+		}
+
+		&:before {
+			content: ' ';
+			display: block;
+			position: absolute;
+			@include rem(top, $size-lg - $checkbox-md + 1px);
+			@include rem(width, $checkbox-md);
+			@include rem(height, $checkbox-md);
+			@include rem(font-size, $size-sm);
+			line-height: 1em;
+			font-weight: $weight-bold;
+			text-align:center;
+			background:#fff;
+			color: $color-txt-main;
+			border-radius: $border-radius-sm;
+		}
+
+		&.checked:before {
+			content: 'x';
+			background:$color-alt;
+			color: $color-txt-main;
+		}
+
+}
+
+
+.button,
+button {
+	display:block;
+	width: 100%;
+	@include rem(font-size, $size-lg);
+	line-height: 1em;
+	margin: 1.6em 0;
+	padding: $field-padding-v $field-padding-h;
+	border: none;
+	color: $color-button;
+	border-radius: $border-radius-md;
+	background: $color-alt;
+	text-align: center;
+	font-weight: $weight-bold;
+
+	&:before {
+		content: '\232a';
+		font-weight: $weight-normal;
+		font-size: 80%;
+
+	}
+}

@@ -7,7 +7,7 @@
 		margin:0;
 		padding:0;
 	}
-	
+
 	.header-logo {
 		img {
 			display:block;
@@ -28,7 +28,7 @@
 
 .center-box {
 	display:inline-block;
-	padding: 1em $margin-h;
+	padding: 2em $margin-h;
 	margin: $margin-v auto;
 	background: $color-bg-2;
 
@@ -41,5 +41,12 @@
 			margin-top: -1.5 * $margin-v;
 		} 
 		
+	}
+
+	> :first-child {
+		margin-top:0;
+	}
+	> :last-child {
+		margin-bottom:0;
 	}
 }
