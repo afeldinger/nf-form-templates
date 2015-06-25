@@ -141,9 +141,13 @@ button {
 	font-weight: $weight-bold;
 
 	&:before {
+		display:inline-block;
+		width:1em;
+		text-align:left;
 		content: '\232a';
 		font-weight: $weight-normal;
 		font-size: 80%;
+		line-height: 1em;
 
 	}
 }

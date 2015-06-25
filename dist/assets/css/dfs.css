@@ -567,6 +567,10 @@ img {
   text-align: center;
   font-weight: 700; }
   .button:before, button:before {
+    display: inline-block;
+    width: 1em;
+    text-align: left;
     content: '\232a';
     font-weight: 400;
-    font-size: 80%; }
+    font-size: 80%;
+    line-height: 1em; }
