@@ -3,6 +3,11 @@
 .field-wrapper {
 	position:relative;
 	display:block;
+	margin-top: $form-spacing;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
 
 	input,
 	textarea,
@@ -15,9 +20,6 @@
 		text-align: left;
 	}
 
-	& + .field-wrapper {
-		margin-top: $form-spacing;
-	}
 }
 
 

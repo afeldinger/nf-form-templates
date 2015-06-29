@@ -406,15 +406,16 @@ small, .small {
 
 .field-wrapper {
   position: relative;
-  display: block; }
+  display: block;
+  margin-top: 7px; }
+  .field-wrapper:first-of-type {
+    margin-top: 0; }
   .field-wrapper input, .field-wrapper textarea, .field-wrapper .label {
     font-size: 18px;
     font-size: 1.29rem; }
   .field-wrapper .label {
     display: block;
     text-align: left; }
-  .field-wrapper + .field-wrapper {
-    margin-top: 7px; }
 
 .inline-elements {
   display: inline-block;
