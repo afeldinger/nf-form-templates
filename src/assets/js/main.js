@@ -3,7 +3,9 @@
     'use strict';
 
     // remove empty content sections
-    $('.hero, .center-box, .content-section, .page-footer').filter(':empty').remove();
+    $('.page-header, .hero, .center-box, .content-section, .page-footer').each(function() {
+    	if ($(this).html().trim() == '') $(this).remove();
+    });
 
 	// control checkboxes and radiobuttons
 	$('input[type=radio], input[type=checkbox]').each(function() {
