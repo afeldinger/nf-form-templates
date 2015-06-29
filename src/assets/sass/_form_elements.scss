@@ -34,8 +34,11 @@
 		.field-wrapper {
 			display: inline-block;
 			margin-right: 1.5rem;
+			margin-left: 1.5rem;
 
+			&:first-of-type, 
 			&:last-of-type {
+				margin-left: 0;
 				margin-right: 0;
 			}
 		}

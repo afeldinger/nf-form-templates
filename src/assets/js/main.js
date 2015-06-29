@@ -3,7 +3,7 @@
     'use strict';
 
     // remove empty content sections
-    $('.content-section:empty').remove();
+    $('.hero, .center-box, .content-section, .page-footer').filter(':empty').remove();
 
 	// control checkboxes and radiobuttons
 	$('input[type=radio], input[type=checkbox]').each(function() {

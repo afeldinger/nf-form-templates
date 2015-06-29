@@ -1,29 +1,8 @@
 
-.brand-header {
+.page-header {
 	background: $color-bg-header;
 	padding: 10px;
 
-	h1 {
-		margin:0;
-		padding:0;
-	}
-
-	.header-logo {
-		img {
-			display:block;
-		}
-	}
-
-	.header-name {
-		display:none;
-	}
-}
-
-.hero {
-	img {
-		display:block;
-		width: 100%;
-	}
 }
 
 .center-box {
@@ -32,7 +11,7 @@
 	margin: $margin-v auto;
 	background: $color-bg-2;
 
-	@include rem(max-width, $max-content-width);
+	@include rem(max-width, $bp-lg);
 
 	.hero + & {
 		margin-top: 0;

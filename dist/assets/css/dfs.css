@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(http://fonts.gstatic.com/s/oxygen/v5/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff'); }
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff'); }
+
 /*! normalize.css v3.0.2 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -317,17 +329,23 @@ table {
 td, th {
   padding: 0; }
 
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oxygen'), local('Oxygen-Regular'), url(http://fonts.gstatic.com/s/oxygen/v5/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff'); }
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
 
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff'); }
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background: #3c3a3d;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+img {
+  max-width: 100%;
+  border: 0; }
 
 *, *:before, *:after {
   -webkit-font-smoothing: antialiased;
@@ -386,96 +404,6 @@ small, .small {
   font-size: 0.71rem;
   line-height: 1.2em; }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-body {
-  background: #3c3a3d;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  text-align: center; }
-
-img {
-  max-width: 100%;
-  border: 0; }
-
-.main-content {
-  display: inline-block;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 790px;
-  max-width: 56.43rem;
-  text-align: left; }
-
-.content-section {
-  margin-top: 3em; }
-  @media (min-width: 40em) {
-    .content-section {
-      margin-top: 1.6em; } }
-  .content-section > *:first-child {
-    margin-top: 0; }
-  .content-section img {
-    display: block;
-    margin: 1.6em auto;
-    max-width: 100%; }
-    p > .content-section img:first-child {
-      margin-top: 0; }
-    p > .content-section img:last-child {
-      margin-bottom: 0; }
-
-@media (min-width: 40em) {
-  .content-header, .content-footer {
-    clear: both;
-    float: none; }
-  section.content-section:not(:only-of-type):nth-of-type(odd) {
-    display: inline;
-    float: left;
-    width: 45%;
-    margin-right: -100%;
-    clear: left; }
-  section.content-section:not(:only-of-type):nth-of-type(even) {
-    display: inline;
-    float: right;
-    width: 45%;
-    clear: right; } }
-
-.brand-header {
-  background: #fff;
-  padding: 10px; }
-  .brand-header h1 {
-    margin: 0;
-    padding: 0; }
-  .brand-header .header-logo img {
-    display: block; }
-  .brand-header .header-name {
-    display: none; }
-
-.hero img {
-  display: block;
-  width: 100%; }
-
-.center-box {
-  display: inline-block;
-  padding: 2em 2rem;
-  margin: 2rem auto;
-  background: #312f32;
-  max-width: 790px;
-  max-width: 56.43rem; }
-  .hero + .center-box {
-    margin-top: 0; }
-    @media (min-width: 40em) {
-      .hero + .center-box {
-        margin-top: -3rem; } }
-  .center-box > :first-child {
-    margin-top: 0; }
-  .center-box > :last-child {
-    margin-bottom: 0; }
-
 .field-wrapper {
   position: relative;
   display: block; }
@@ -496,8 +424,10 @@ img {
       display: block; }
       .inline-elements .field-wrapper {
         display: inline-block;
-        margin-right: 1.5rem; }
-        .inline-elements .field-wrapper:last-of-type {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem; }
+        .inline-elements .field-wrapper:first-of-type, .inline-elements .field-wrapper:last-of-type {
+          margin-left: 0;
           margin-right: 0; } }
 
 .field-wrapper-text input, .field-wrapper-textarea input, .field-wrapper-text textarea, .field-wrapper-textarea textarea {
@@ -587,3 +517,74 @@ label.error {
   display: block; }
   .field-group label.error {
     margin-top: 7px; }
+
+.page-header h1 {
+  margin: 0;
+  padding: 0; }
+.page-header .header-logo img {
+  display: block; }
+.page-header .header-name {
+  display: none; }
+
+.hero img {
+  display: block;
+  width: 100%; }
+
+.main-content {
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  max-width: 56.43em;
+  text-align: left; }
+
+.content-section {
+  margin-top: 3em; }
+  @media (min-width: 40em) {
+    .content-section {
+      margin-top: 1.6em; } }
+  .content-section > *:first-child {
+    margin-top: 0; }
+  .content-section img {
+    display: block;
+    margin: 1.6em auto;
+    max-width: 100%; }
+    p > .content-section img:first-child {
+      margin-top: 0; }
+    p > .content-section img:last-child {
+      margin-bottom: 0; }
+
+@media (min-width: 40em) {
+  .content-header, .content-footer {
+    clear: both;
+    float: none; }
+  section.content-section:not(:only-of-type):nth-of-type(odd) {
+    display: inline;
+    float: left;
+    width: 45%;
+    margin-right: -100%;
+    clear: left; }
+  section.content-section:not(:only-of-type):nth-of-type(even) {
+    display: inline;
+    float: right;
+    width: 45%;
+    clear: right; } }
+
+.page-header {
+  background: #fff;
+  padding: 10px; }
+
+.center-box {
+  display: inline-block;
+  padding: 2em 2rem;
+  margin: 2rem auto;
+  background: #312f32;
+  max-width: 56.43em; }
+  .hero + .center-box {
+    margin-top: 0; }
+    @media (min-width: 40em) {
+      .hero + .center-box {
+        margin-top: -3rem; } }
+  .center-box > :first-child {
+    margin-top: 0; }
+  .center-box > :last-child {
+    margin-bottom: 0; }

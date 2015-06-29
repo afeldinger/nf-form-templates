@@ -1,20 +1,8 @@
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oxygen'), local('Oxygen-Regular'), url(http://fonts.gstatic.com/s/oxygen/v5/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
-}
-@font-face {
-  font-family: 'Oxygen';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
 
-$font-stack-oxygen: 'Oxygen', helvetica, arial, sans-serif;
-$font-header: $font-stack-oxygen;
-$font-body: $font-stack-oxygen;
 
+$font-stack-sans-serif: helvetica, arial, sans-serif;
+$font-header: $font-stack-sans-serif !default;
+$font-body: $font-stack-sans-serif !default;
 
 *, *:before, *:after {
     -webkit-font-smoothing: antialiased;

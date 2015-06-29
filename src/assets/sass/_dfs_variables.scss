@@ -1,27 +1,24 @@
 
 
-// Colors
+// Typography:
 
-$color-bg-main: #3c3a3d;
-$color-bg-2: #312f32;
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(http://fonts.gstatic.com/s/oxygen/v5/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
 
-$color-txt-1: #fff;
-$color-txt-2: #808080;
+$font-stack-oxygen: 'Oxygen', helvetica, arial, sans-serif;
+$font-header: $font-stack-oxygen;
+$font-body: $font-stack-oxygen;
 
-$color-txt-main: $color-txt-1;
-$color-txt-field: #4d4d4d;
-
-$color-alt: #ff3a13;
-
-$color-bg-header: #fff;
-
-$color-button: #fff;
-
-$color-error-bg: #ffb1b1;
-$color-error: $color-alt;
-
-
-// Typography sizes:
 
 $size-xxl: 28px;
 $size-xl: 24px;
@@ -49,9 +46,7 @@ $button-padding-v:	0px;
 
 // Grid
 
-$max-content-width: 790px;
-
-$bp-lg: $max-content-width / $base-font-size * 1em;
+$bp-lg: 790px / $base-font-size * 1em;
 $bp-md: 40em;
 $bp-sm: 25em;
 
@@ -61,3 +56,24 @@ $margin-v: 2rem;
 $border-radius-md: 4px;
 $border-radius-sm: 2px;
 
+
+
+// Colors
+
+$color-bg-main: #3c3a3d;
+$color-bg-2: #312f32;
+
+$color-txt-1: #fff;
+$color-txt-2: #808080;
+
+$color-txt-main: $color-txt-1;
+$color-txt-field: #4d4d4d;
+
+$color-alt: #ff3a13;
+
+$color-bg-header: #fff;
+
+$color-button: #fff;
+
+$color-error-bg: #ffb1b1;
+$color-error: $color-alt;
