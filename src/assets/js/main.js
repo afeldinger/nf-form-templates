@@ -2,6 +2,8 @@
 (function() {
     'use strict';
 
+    // remove empty content sections
+    $('.content-section:empty').remove();
 
 	// control checkboxes and radiobuttons
 	$('input[type=radio], input[type=checkbox]').each(function() {

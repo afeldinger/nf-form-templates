@@ -24,6 +24,7 @@ img {
 }
 
 .main-content {
+	display:inline-block;
 	margin: $margin-v auto;
 	padding: 0 $margin-h;
 	@include rem(max-width, $max-content-width);
@@ -65,19 +66,21 @@ img {
 		float:none;
 	}
 
-	.content-section-2,
-	.content-section-4 {
-		display:inline;
-		float:left;
-		width:45%;
-		margin-right: -100%;
-		clear:left;
-	}
-	.content-section-1,
-	.content-section-3 {
-		display:inline;
-		float:right;
-		width:45%;
-		clear:right;
+	section.content-section {
+		&:not(:only-of-type) {
+			&:nth-of-type(odd) {
+				display:inline;
+				float:left;
+				width:45%;
+				margin-right: -100%;
+				clear:left;
+			}
+			&:nth-of-type(even) {
+				display:inline;
+				float:right;
+				width:45%;
+				clear:right;
+			}
+		}
 	}
 }

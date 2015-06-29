@@ -85,6 +85,6 @@ em {
 small,
 .small {
 	@include rem(font-size, $size-xs);
-	line-height: 1.6em;
+	line-height: 1.2em;
 }
 
