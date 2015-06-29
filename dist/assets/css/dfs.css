@@ -526,6 +526,8 @@ label.error {
 .page-header .header-name {
   display: none; }
 
+.hero p:only-of-type {
+  margin: 0; }
 .hero img {
   display: block;
   width: 100%; }
