@@ -367,7 +367,7 @@ module.exports = function(grunt) {
     'cssmin',
     'uglify',
     'usemin',
-    //'replace:dist',
+    'replace:dist',
   ]);
 
 };
