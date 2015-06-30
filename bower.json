@@ -1,0 +1,6 @@
+{
+  "name": "form_templates",
+  "dependencies": {
+    "jquery.validate": "~1.13.0"
+  }
+}
