@@ -36,4 +36,15 @@
 			margin-top: -20px;
 		}
 	}
+
+	.field-wrapper {
+		.label {
+			color: $color-txt-2;
+		}
+	}
+}
+
+small,
+.small {
+	color: $color-txt-2;
 }

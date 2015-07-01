@@ -354,7 +354,7 @@ html {
   font-size: 14px;
   font-size: 1em;
   font-family: 'Oxygen', helvetica, arial, sans-serif;
-  color: #9e9e9e; }
+  color: #444444; }
 
 body {
   font-size: 1rem;
@@ -636,3 +636,8 @@ label.error {
   @media (max-width: 40em) {
     .hero + .center-box {
       margin-top: -20px; } }
+  .center-box .field-wrapper .label {
+    color: #9e9e9e; }
+
+small, .small {
+  color: #9e9e9e; }
