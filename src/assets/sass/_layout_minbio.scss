@@ -1,0 +1,39 @@
+
+.page-header {
+	height: 140px;
+
+	.header-logo {
+		position:absolute;
+		display:block;
+		width: 100%;
+	}
+	img {
+		width: 470px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	& + .hero {
+		margin-top: -140px;
+	}
+}
+
+
+
+.center-box {
+	position:relative;
+	z-index:2;
+	box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
+	border-color: #b96720;
+	border-style: solid;
+	border-width: 20px;
+	border-radius: 20px;
+	border-image: url(../img/minbio_border.png) 20 round;
+	overflow:hidden;
+
+	@media (max-width: $bp-md) {
+		.hero + & {
+			margin-top: -20px;
+		}
+	}
+}

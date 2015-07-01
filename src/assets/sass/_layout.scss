@@ -29,9 +29,43 @@
 	}
 }
 
+.center-box {
+	display:inline-block;
+	padding: 2em $margin-h;
+	margin: $margin-v auto;
+	background: $color-bg-2;
+
+	@include rem(max-width, $bp-lg);
+
+	
+	.field-wrapper {
+		input,
+		textarea,
+		.label {
+			@include rem(font-size, $size-xl);
+		}
+	}
+
+	.hero + & {
+		margin-top: 0;
+
+		@media (min-width: $bp-md) {
+			margin-top: -1.5 * $margin-v;
+		} 
+		
+	}
+
+	> :first-child {
+		margin-top:0;
+	}
+	> :last-child {
+		margin-bottom:0;
+	}
+}
+
 .main-content {
 	display:inline-block;
-	margin: $margin-v auto;
+	margin: 0 auto $margin-v;
 	padding: 0 $margin-h;
 	@include rem(max-width, $bp-lg);
 
@@ -40,6 +74,7 @@
 }
 
 .content-section {
+
 	margin-top: 3em;
 	@media (min-width: $bp-md) {
 		margin-top: 1.6em;
@@ -64,12 +99,19 @@
 
 }
 
+.content-header {
+	color: $color-txt-header;
+}
+
 @media (min-width: $bp-md) {
 
 	.content-header,
 	.content-footer {
 		clear:both;
 		float:none;
+		max-width: 75%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	section.content-section {
@@ -77,16 +119,28 @@
 			&:nth-of-type(odd) {
 				display:inline;
 				float:left;
-				width:45%;
+				width:47%;
 				margin-right: -100%;
 				clear:left;
 			}
 			&:nth-of-type(even) {
 				display:inline;
 				float:right;
-				width:45%;
+				width:47%;
 				clear:right;
 			}
+		}
+	}
+}
+
+.page-footer {
+	button,
+	.button {
+		padding: 20px $field-padding-h;
+		border-radius: 0;
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

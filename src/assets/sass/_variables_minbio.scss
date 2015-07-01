@@ -1,0 +1,49 @@
+
+
+// Typography:
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(http://fonts.gstatic.com/s/oxygen/v5/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+$font-stack-oxygen: 'Oxygen', helvetica, arial, sans-serif;
+$font-header: $font-stack-oxygen;
+$font-body: $font-stack-oxygen;
+
+
+// Colors
+
+$color-bg-main: #fff;
+$color-bg-2: #fff;
+
+$color-txt-1: #444444;
+$color-txt-2: #9e9e9e;
+
+$color-txt-header: $color-txt-1;
+$color-txt-main: $color-txt-2;
+$color-txt-field: #4d4d4d;
+
+$color-alt: #bf0715;
+
+$color-bg-header: #fff;
+
+$color-button: #fff;
+
+$color-error-bg: #ffb1b1;
+$color-error: $color-alt;
+
+
+// Forms
+$field-border: 1px solid $color-txt-2;
+$color-checkbox-bg: #c7c5c5;
+$color-checkbox-txt: #fff;
+

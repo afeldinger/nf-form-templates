@@ -57,7 +57,7 @@
 		padding: $field-padding-v $field-padding-h;
 		outline: none;
 		border-radius: $border-radius-md;
-		border:0;
+		border: $field-border;
 		margin:0;
 		color: $color-txt-field;
 	}
@@ -111,22 +111,22 @@
 			content: ' ';
 			display: block;
 			position: absolute;
-			@include rem(top, $size-lg - $checkbox-md + 1px);
+			@include rem(top, $size-lg - $checkbox-md + 2px);
 			@include rem(width, $checkbox-md);
 			@include rem(height, $checkbox-md);
-			@include rem(font-size, $size-sm);
-			line-height: 1em;
+			//@include rem(font-size, $size-sm);
 			font-weight: $weight-bold;
+			font-size: 1em;
+			@include rem(line-height, $checkbox-md - 1px);
 			text-align:center;
-			background:#fff;
-			color: $color-txt-main;
+			background: $color-checkbox-bg;
 			border-radius: $border-radius-sm;
 		}
 
 		&.checked:before {
-			content: 'x';
+			content: '\00d7';
 			background:$color-alt;
-			color: $color-txt-main;
+			color: $color-checkbox-txt;
 		}
 
 }
@@ -149,12 +149,18 @@ button {
 
 	&:before {
 		display:inline-block;
-		width:1em;
-		text-align:left;
-		content: '\232a';
+		//content: '\232a';
+		content: '\203A';
+		padding: 0;
+		margin-right: 5px;
+		width: 20px;
+		height: 20px;
+		border-radius: .6em;
+		text-align: center;
 		font-weight: $weight-normal;
-		font-size: 80%;
-		line-height: 1em;
+		font-size: 1.2em;
+		line-height: 15px;
+		background:rgba(255,255,255,.4);
 
 	}
 }

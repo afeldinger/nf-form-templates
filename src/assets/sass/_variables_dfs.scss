@@ -20,43 +20,6 @@ $font-header: $font-stack-oxygen;
 $font-body: $font-stack-oxygen;
 
 
-$size-xxl: 28px;
-$size-xl: 24px;
-$size-lg: 18px;
-$size-md: 14px;
-$size-sm: 12px;
-$size-xs: 10px;
-
-$base-font-size: $size-md;
-
-$weight-bold: 700;
-$weight-normal: 400;
-
-
-// Forms
-$checkbox-md: 		15px;
-$checkbox-margin: 	7px;
-
-$form-spacing: 		7px;
-$field-padding-h: 	11px;
-$field-padding-v: 	11px;
-$button-padding-h:	18px;
-$button-padding-v:	0px;
-
-
-// Grid
-
-$bp-lg: 790px / $base-font-size * 1em;
-$bp-md: 40em;
-$bp-sm: 25em;
-
-$margin-h: 2rem;
-$margin-v: 2rem;
-
-$border-radius-md: 4px;
-$border-radius-sm: 2px;
-
-
 
 // Colors
 
@@ -64,9 +27,10 @@ $color-bg-main: #3c3a3d;
 $color-bg-2: #312f32;
 
 $color-txt-1: #fff;
-$color-txt-2: #808080;
+$color-txt-2: #9e9e9e;
 
-$color-txt-main: $color-txt-1;
+$color-txt-header: $color-txt-1;
+$color-txt-main: $color-txt-2;
 $color-txt-field: #4d4d4d;
 
 $color-alt: #ff3a13;

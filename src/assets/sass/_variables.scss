@@ -1,0 +1,75 @@
+
+
+// Typography:
+
+$font-stack-sans-serif: helvetica, arial, sans-serif;
+$font-header: $font-stack-sans-serif !default;
+$font-body: $font-stack-sans-serif !default;
+
+
+$size-xxl: 28px;
+$size-xl: 22px;
+$size-lg: 18px;
+$size-md: 16px;
+$size-sm: 12px;
+$size-xs: 10px;
+
+$base-font-size: $size-md;
+
+$weight-bold: 700;
+$weight-normal: 400;
+
+
+
+// Grid
+
+$bp-lg: 850px / $base-font-size * 1em;
+$bp-md: 40em;
+$bp-sm: 25em;
+
+$margin-h: 2rem;
+$margin-v: 2rem;
+
+$border-radius-md: 4px;
+$border-radius-sm: 2px;
+
+
+
+// Colors
+
+$color-bg-main: #3c3a3d;
+$color-bg-2: #312f32;
+
+$color-txt-1: #fff;
+$color-txt-2: #9e9e9e;
+
+$color-txt-header: $color-txt-1;
+$color-txt-main: $color-txt-2;
+$color-txt-field: #4d4d4d;
+
+$color-alt: #ff3a13;
+
+$color-bg-header: #fff;
+
+$color-button: #fff;
+
+$color-error-bg: #ffb1b1;
+$color-error: $color-alt;
+
+$color-checkbox-bg: #fff;
+$color-checkbox-txt: $color-txt-main;
+
+
+// Forms
+
+$checkbox-md: 		15px;
+$checkbox-margin: 	7px;
+
+$form-spacing: 		7px;
+$field-padding-h: 	11px;
+$field-padding-v: 	11px;
+$button-padding-h:	18px;
+$button-padding-v:	0px;
+
+$field-border: none;
+
