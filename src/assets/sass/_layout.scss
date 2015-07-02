@@ -1,7 +1,6 @@
 
 
 .page-header {
-
 	h1 {
 		margin:0;
 		padding:0;
@@ -20,13 +19,28 @@
 
 
 .hero {
+	display:block;
+	overflow: hidden;
+
 	p:only-of-type {
 		margin: 0;
 	}
 	img {
 		display:block;
 		width: 100%;
+	
+		@media (max-width: $bp-md) {
+
+			.csstransforms & {
+				width:auto;
+				max-width: none !important;
+				min-height: 200px;
+				margin-left:50%;
+				transform: translateX(-50%);
+			}	
+		}
 	}
+
 }
 
 .center-box {
@@ -36,7 +50,6 @@
 	background: $color-bg-2;
 
 	@include rem(max-width, $bp-lg);
-
 	
 	.field-wrapper {
 		input,
@@ -64,11 +77,10 @@
 }
 
 .main-content {
-	display:inline-block;
 	margin: 0 auto $margin-v;
 	padding: 0 $margin-h;
+	width: 100%;
 	@include rem(max-width, $bp-lg);
-
 	text-align:left;
 
 }
@@ -101,6 +113,8 @@
 
 .content-header {
 	color: $color-txt-header;
+	@include rem(font-size, $size-lg);
+	line-height: 1.5em;
 }
 
 @media (min-width: $bp-md) {

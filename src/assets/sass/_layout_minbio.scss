@@ -4,12 +4,13 @@
 
 	.header-logo {
 		position:absolute;
+		z-index: 2;
 		display:block;
 		width: 100%;
 	}
 	img {
 		width: 470px;
-		max-width: 100%;
+		max-width: 65%;
 		margin: 0 auto;
 	}
 
@@ -30,12 +31,6 @@
 	border-radius: 20px;
 	border-image: url(../img/minbio_border.png) 20 round;
 	overflow:hidden;
-
-	@media (max-width: $bp-md) {
-		.hero + & {
-			margin-top: -20px;
-		}
-	}
 
 	.field-wrapper {
 		.label {

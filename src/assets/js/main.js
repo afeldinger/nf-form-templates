@@ -4,7 +4,9 @@
 
     // remove empty content sections
     $('.page-header, .hero, .center-box, .content-section, .page-footer').each(function() {
-    	if ($(this).html().trim() == '') $(this).remove();
+    	if ($(this).html().trim() === '') {
+    		$(this).remove();
+    	}
     });
 
 	// control checkboxes and radiobuttons
@@ -32,6 +34,12 @@
 		;
 	}).each(function() {
 		$(this).parents('label').toggleClass('has-value', $(this).val()!=='');
+	});
+
+	$('select').selectric({
+		disableOnMobile: false,
+		responsive: true,
+		//inheritOriginalWidth: true,
 	});
 
 

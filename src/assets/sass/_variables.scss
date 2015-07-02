@@ -37,17 +37,17 @@ $border-radius-sm: 2px;
 
 // Colors
 
-$color-bg-main: #3c3a3d;
-$color-bg-2: #312f32;
+$color-bg-main: #3d3a3c;
+$color-bg-2: #322f31;
 
 $color-txt-1: #fff;
 $color-txt-2: #9e9e9e;
 
 $color-txt-header: $color-txt-1;
 $color-txt-main: $color-txt-2;
-$color-txt-field: #4d4d4d;
 
 $color-alt: #ff3a13;
+$color-alt-active: #f2725e;
 
 $color-bg-header: #fff;
 
@@ -56,6 +56,9 @@ $color-button: #fff;
 $color-error-bg: #ffb1b1;
 $color-error: $color-alt;
 
+
+$color-txt-field: #4d4d4d;
+$color-field-bg: #fff;
 $color-checkbox-bg: #fff;
 $color-checkbox-txt: $color-txt-1;
 
