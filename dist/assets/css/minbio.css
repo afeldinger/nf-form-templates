@@ -803,8 +803,8 @@ label.error {
     display: block;
     width: 100%; }
   .page-header img {
-    width: 470px;
-    max-width: 65%;
+    width: 330px;
+    max-width: 44%;
     margin: 0 auto; }
   .page-header + .hero {
     margin-top: -140px; }
