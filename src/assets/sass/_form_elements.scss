@@ -120,19 +120,23 @@
 			@include rem(top, $size-lg - $checkbox-md + 2px);
 			@include rem(width, $checkbox-md);
 			@include rem(height, $checkbox-md);
-			//@include rem(font-size, $size-sm);
 			font-weight: $weight-bold;
 			font-size: 1em;
 			@include rem(line-height, $checkbox-md - 1px);
 			text-align:center;
-			background: $color-checkbox-bg;
+			background-color: $color-checkbox-bg;
+			background-size: 7px 7px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
 			border-radius: $border-radius-sm;
+			overflow: hidden;
 
 			transition: background-color .3s;
 		}
 
 		&.checked:before {
-			content: '\00d7';
+			//content: '\00d7';
+			@extend %symbol-cross;
 			background-color:$color-alt;
 			color: $color-checkbox-txt;
 		}
@@ -155,7 +159,7 @@
 		font-weight: $weight-bold;
 
 		transition: background-color .3s;
-
+/*
 		&:before {
 			display:inline-block;
 			//content: '\232a';
@@ -171,6 +175,18 @@
 			line-height: 15px;
 			background:rgba(255,255,255,.4);
 
+		}
+*/
+		&:before {
+			display: inline-block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			margin-right: 6px;
+			overflow: hidden;
+			vertical-align: top;
+
+			@extend %symbol-arrow;
 		}
 
 		&:hover {

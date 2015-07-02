@@ -32,6 +32,11 @@
 	border-image: url(../img/minbio_border.png) 20 round;
 	overflow:hidden;
 
+	@media (max-width: $bp-md) {
+		.hero + & {
+			margin-top: -20px;
+		}
+	}
 	.field-wrapper {
 		.label {
 			color: $color-txt-2;
