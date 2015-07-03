@@ -9,9 +9,13 @@
 		width: 100%;
 	}
 	img {
-		width: 330px;
+		width: 200px;
 		max-width: 44%;
 		margin: 0 auto;
+
+		@media (min-width: $bp-lg) {
+			width: 330px;
+		}
 	}
 
 	& + .hero {

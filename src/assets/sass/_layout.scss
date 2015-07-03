@@ -45,15 +45,17 @@
 
 .center-box {
 	display:inline-block;
-	padding: 2em $margin-h;
+	@include rem(padding, 20px);
 	margin: $margin-v auto 0;
 	background: $color-bg-2;
 
 	@include rem(max-width, $bp-lg);
 	
 	@media (min-width: $bp-sm) {
-		padding-left: 2 * $margin-h;
-		padding-right: 2 * $margin-h;
+		@include rem(padding-left, 50px);
+		@include rem(padding-right, 50px);
+		@include rem(padding-top, 30px);
+		@include rem(padding-bottom, 30px);
 	}
 
 	.field-wrapper {
@@ -83,23 +85,27 @@
 
 .main-content {
 	margin: 0 auto $margin-v;
-	padding: 0 $margin-h;
+	padding: 0;
+	@include rem(padding-left, 20px);
+	@include rem(padding-right, 20px);
+
 	width: 100%;
 	@include rem(max-width, $bp-lg);
 	text-align:left;
 
 	@media (min-width: $bp-sm) {
-		padding: 0 (2 * $margin-h);
+		@include rem(padding-left, 50px);
+		@include rem(padding-right, 50px);
 	}
 
 }
 
 .content-section {
 
-	@include rem(margin-bottom, 50px);
+	@include rem(margin-bottom, 20px);
 	
 	&:first-child {
-		@include rem(margin-top, 50px);
+		@include rem(margin-top, 20px);
 	}
 
 	> :first-child {
@@ -111,8 +117,24 @@
 
 	img {
 		display:block;
-		margin: 1.6em auto;
-		max-width: 100%;
+		margin: 1.2em auto;
+		//max-width: 100%;
+		width: 100vw;
+		max-width: none;
+
+		@include rem(margin-left, -20px);
+		@include rem(margin-right, -20px);
+
+		@media (min-width: $bp-sm) {
+			@include rem(margin-left, -50px);
+			@include rem(margin-right, -50px);
+		}
+		@media (min-width: $bp-md) {
+			max-width: 100%;
+			width: auto;
+			margin-left:auto;
+			margin-right:auto;
+		}
 
 		p > &:first-child {
 			margin-top:0;
@@ -130,7 +152,29 @@
 	line-height: 1.5em;
 }
 
+
+.page-footer {
+	@include rem(margin-top, 20px);
+
+	button {
+		border-radius: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 @media (min-width: $bp-md) {
+	
+	.content-section {
+
+		@include rem(margin-bottom, 50px);
+		
+		&:first-child {
+			@include rem(margin-top, 50px);
+		}
+	}
 
 	.content-header,
 	.content-footer {
@@ -158,18 +202,9 @@
 			}
 		}
 	}
-}
 
-.page-footer {
-	@include rem(margin-top, 50px);
 
-	button,
-	.button {
-		padding: 20px $field-padding-h;
-		border-radius: 0;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
+	.page-footer {
+		@include rem(margin-top, 50px);
 	}
 }
