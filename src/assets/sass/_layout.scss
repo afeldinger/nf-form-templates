@@ -51,6 +51,11 @@
 
 	@include rem(max-width, $bp-lg);
 	
+	@media (min-width: $bp-sm) {
+		padding-left: 2 * $margin-h;
+		padding-right: 2 * $margin-h;
+	}
+
 	.field-wrapper {
 		input,
 		textarea,
@@ -82,6 +87,10 @@
 	width: 100%;
 	@include rem(max-width, $bp-lg);
 	text-align:left;
+
+	@media (min-width: $bp-sm) {
+		padding: 0 (2 * $margin-h);
+	}
 
 }
 

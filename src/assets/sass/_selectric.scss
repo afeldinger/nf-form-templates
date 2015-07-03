@@ -2,10 +2,8 @@ $main-color: #DDD;
 $secondary-color: #BBB;
 $bg-color: $color-field-bg;
 $text-color: #444;
-$height: 40px;
-$spacing: 10px;
-$border-width: 1px;
-$inner-height: $height - ($border-width * 2);
+
+$select-button-width: 2.4rem;
 
 .selectric-wrapper {
   position: relative;
@@ -27,11 +25,10 @@ $inner-height: $height - ($border-width * 2);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 $inner-height 0 $spacing;
+    margin: 0 $select-button-width 0 0;
+    padding: $field-padding-v 0 $field-padding-v $field-padding-h;
     font-size: 12px;
-    line-height: $inner-height;
     color: $text-color;
-    height: $inner-height;
   }
 
   .button {
@@ -39,12 +36,12 @@ $inner-height: $height - ($border-width * 2);
     position: absolute;
     right: 0;
     top: 0;
-    width: $inner-height;
-    height: $inner-height;
+    width: $select-button-width;
+    height: 100%;
     color: $secondary-color;
     text-align: center;
     font: 0/0 a;
-    *font: 20px/#{$inner-height} Lucida Sans Unicode, Arial Unicode MS, Arial;
+    *font: 20px/100% Lucida Sans Unicode, Arial Unicode MS, Arial;
 
     &:after {
       content: " ";
@@ -78,12 +75,34 @@ $inner-height: $height - ($border-width * 2);
   z-index: 9999;
 
   .selectric {
-    border-color: darken($main-color, 10%);
+    //border-color: darken($main-color, 10%);
     border-radius: $border-radius-md $border-radius-md 0 0;
+
   }
 
   .selectric-items {
     display: block;
+  }
+
+  &:not(.selectric-above) {
+      .seletric {
+        //border-bottom-color: transparent;
+      }
+      .selectric-items {
+        border-top-width: 0;
+      }
+  }
+  
+  &.selectric-above {
+    .selectric {
+      //border-top-color: transparent;
+      border-radius: 0 0 $border-radius-md $border-radius-md;
+    }
+
+    .selectric-items {
+      border-radius: $border-radius-md $border-radius-md 0 0;
+      border-bottom-width: 0;
+    }
   }
 }
 
@@ -157,18 +176,20 @@ $inner-height: $height - ($border-width * 2);
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 12px;
-    line-height: 20px;
-    min-height: 20px;
+    @include rem(font-size, $size-sm);
+    line-height: 1.4em;
   }
 
   li {
     display: block;
-    padding: 8px;
-    border-top: 1px solid #FFF;
+    padding: 1em $field-padding-h;
     border-bottom: 1px solid #EEE;
     color: #666;
     cursor: pointer;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
 
     &.selected {
       background: #EFEFEF;
