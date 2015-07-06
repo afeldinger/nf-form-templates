@@ -36,12 +36,13 @@
 
 		.field-wrapper {
 			display: inline-block;
-			margin-right: 1.5rem;
-			margin-left: 1.5rem;
+			margin-right: .75rem;
+			margin-left: .75rem;
 
-			&:first-of-type, 
-			&:last-of-type {
+			&:first-of-type {
 				margin-left: 0;
+			} 
+			&:last-of-type {
 				margin-right: 0;
 			}
 		}

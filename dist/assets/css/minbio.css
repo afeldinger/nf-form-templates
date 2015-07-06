@@ -603,10 +603,11 @@ small, .small {
       display: block; }
       .inline-elements .field-wrapper {
         display: inline-block;
-        margin-right: 1.5rem;
-        margin-left: 1.5rem; }
-        .inline-elements .field-wrapper:first-of-type, .inline-elements .field-wrapper:last-of-type {
-          margin-left: 0;
+        margin-right: .75rem;
+        margin-left: .75rem; }
+        .inline-elements .field-wrapper:first-of-type {
+          margin-left: 0; }
+        .inline-elements .field-wrapper:last-of-type {
           margin-right: 0; } }
 
 .field-wrapper-text input, .field-wrapper-textarea input, .field-wrapper-text textarea, .field-wrapper-textarea textarea {
