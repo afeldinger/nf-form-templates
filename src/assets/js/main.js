@@ -62,7 +62,7 @@
 			return true;
 		});
 
-	});
+	}).trigger('change');
 
 
 
