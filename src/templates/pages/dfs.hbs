@@ -102,6 +102,31 @@ key: dfs
 			</select>
 		</label>
 
+		<h3>Børn</h3>
+		<label for="children" class="field-wrapper field-wrapper-select">
+			<select id="children" name="children">
+				<option value="">Antal børn</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+		</label>
+
+	{{#times 4}}
+		<label for="child-{{add this 1}}" class="field-wrapper field-wrapper-select">
+			<select id="child-{{add this 1}}" name="child_{{add this 1}}">
+				<option value="">Barn {{add this 1}} fødselsår</option>
+			{{#times 20}}
+				<option value="{{subtract 2015 this}}">{{subtract 2015 this}}</option>
+			{{/times}}
+			</select>
+		</label>
+	{{/times}}
+
+
+
 
 			<p class="small"><strong>Section 3: bottom right</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
