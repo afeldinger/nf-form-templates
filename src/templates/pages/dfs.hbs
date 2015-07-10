@@ -115,8 +115,13 @@ key: dfs
 		</label>
 
 	{{#times 4}}
-		<label for="child-{{add this 1}}" class="field-wrapper field-wrapper-select">
-			<select id="child-{{add this 1}}" name="child_{{add this 1}}">
+		<label for="child-{{add this 1}}-name" class="field-wrapper field-wrapper-text">
+			<span class="label">Barn {{add this 1}} navn</span>
+			<input id="child-{{add this 1}}-name" name="child_{{add this 1}}_name" type="text" class="input-text">
+		</label>
+		
+		<label for="child-{{add this 1}}-year" class="field-wrapper field-wrapper-select">
+			<select id="child-{{add this 1}}-year" name="child_{{add this 1}}_year">
 				<option value="">Barn {{add this 1}} fødselsår</option>
 			{{#times 20}}
 				<option value="{{subtract 2015 this}}">{{subtract 2015 this}}</option>

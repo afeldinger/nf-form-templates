@@ -44,7 +44,7 @@
 
 	$('select#children').on('change', function() {
 		var child_count = $(this).val() || 0;
-		var $children = $('select[id ^= "child-"]');
+		var $children = $(':input[id ^= "child-"]');
 
 		if (!child_count) {
 			$children.closest('label').hide();
@@ -53,10 +53,15 @@
 		}
 
 		$children.each(function() {
-			var n = parseInt($(this).attr('id').substr(6), 10);
+			var n = $(this).attr('id').split('-')[1];
+
 			$(this).closest('label').toggle(n<=child_count);
 			if (n>child_count) {
-				$(this).prop('selectedIndex', 0).selectric('refresh');
+				if ($(this).is('select')) {
+					$(this).prop('selectedIndex', 0).selectric('refresh');
+				} else {
+					$(this).val('');
+				}
 			}
 			
 			return true;
