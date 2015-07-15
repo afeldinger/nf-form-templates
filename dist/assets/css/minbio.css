@@ -335,6 +335,11 @@ button:before {
 .field-wrapper-radio.checked:before, .field-wrapper-checkbox.checked:before {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAALVBMVEX///////////////////////////////////////////////////////////+g0jAFAAAADnRSTlMAJzB4gYSQn7TAw+fq7epinMYAAAAiSURBVAjXY2hhYF7AKG369jED485DDCz/tzIxgFkQMZAsAMOgC0MC2ptEAAAAAElFTkSuQmCC'); }
 
+.field-group-child:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box; }
@@ -724,6 +729,25 @@ label.error {
   display: block; }
   .field-group label.error {
     margin-top: 12px; }
+
+/*********************************
+ *
+ *	Specific field overrides
+ *
+ *********************************/
+.field-group-child {
+  margin-top: 12px; }
+  .field-group-child .field-wrapper {
+    margin-top: 0;
+    width: 49%; }
+    .field-group-child .field-wrapper:nth-of-type(odd) {
+      float: left;
+      margin-right: -100%;
+      clear: left; }
+    .field-group-child .field-wrapper:nth-of-type(even) {
+      float: right;
+      margin-left: -100%;
+      clear: right; }
 
 .page-header h1 {
   margin: 0;

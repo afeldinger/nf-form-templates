@@ -46,16 +46,10 @@
 		var child_count = $(this).val() || 0;
 		var $children = $(':input[id ^= "child-"]');
 
-		if (!child_count) {
-			$children.closest('label').hide();
-			console.log('hide all');
-			return false;
-		}
-
 		$children.each(function() {
 			var n = $(this).attr('id').split('-')[1];
 
-			$(this).closest('label').toggle(n<=child_count);
+			$(this).closest('.field-group-child').toggle(n<=child_count);
 			if (n>child_count) {
 				if ($(this).is('select')) {
 					$(this).prop('selectedIndex', 0).selectric('refresh');

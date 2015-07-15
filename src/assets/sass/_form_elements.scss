@@ -16,6 +16,7 @@
 		@include rem(font-size, $size-lg);
 	}
 
+
 	.label {
 		display: block;
 		text-align: left;
@@ -50,12 +51,11 @@
 }
 
 
-
 .field-wrapper-text {
 
 	input,
 	textarea {
-	  	width:100%;
+	  	width: 100%;
 		padding: $field-padding-v $field-padding-h;
 		outline: none;
 		border-radius: $border-radius-md;
@@ -217,5 +217,33 @@ label.error {
 
 	.field-group & {
 		margin-top: $form-spacing;
+	}
+}
+
+
+/*********************************
+ *
+ *	Specific field overrides
+ *
+ *********************************/
+
+.field-group-child {
+	@extend %clearfix;
+	margin-top: $form-spacing;
+
+	.field-wrapper {
+		margin-top: 0;
+		width:49%;
+
+		&:nth-of-type(odd) {
+			float:left;
+			margin-right: -100%;
+			clear:left;
+		}
+		&:nth-of-type(even) {
+			float:right;
+			margin-left: -100%;
+			clear:right;
+		}
 	}
 }
