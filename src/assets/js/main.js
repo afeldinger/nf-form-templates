@@ -64,6 +64,7 @@
 	    format: 'yyyy-mm-dd',
 	    //orientation: 'auto left',
 	    autoclose: true,
+	    startView: 2,
 	    language: 'da'
 	}).on('changeDate', function(ev) {
 			$(ev.currentTarget).trigger('blur');
