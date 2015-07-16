@@ -95,6 +95,40 @@ key: minbio
 		</label>
 
 
+		<h3>Børn</h3>
+		<label for="children" class="field-wrapper field-wrapper-select">
+			<select id="children" name="children">
+				<option value="">Antal børn</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+		</label>
+
+	{{#times 4}}
+		<div class="field-group field-group-child" id="child-{{add this 1}}-group">
+			<label for="child-{{add this 1}}-name" class="field-wrapper field-wrapper-text">
+				<span class="label">Barnets navn</span>
+				<input id="child-{{add this 1}}-name" name="child_{{add this 1}}_name" type="text" class="input-text">
+			</label>
+			<!--
+			<label for="child-{{add this 1}}-year" class="field-wrapper field-wrapper-select">
+				<select id="child-{{add this 1}}-year" name="child_{{add this 1}}_year">
+					<option value="">Fødselsår</option>
+				{{#times 20}}
+					<option value="{{subtract 2015 this}}">{{subtract 2015 this}}</option>
+				{{/times}}
+				</select>
+			</label>-->
+			<label for="child-{{add this 1}}-date" class="field-wrapper field-wrapper-text">
+				<span class="label">Fødselsdato</span>
+				<input id="child-{{add this 1}}-date" name="child_{{add this 1}}_date" type="text" class="input-date">
+			</label>
+
+		</div>
+	{{/times}}
 			<p class="small"><strong>Section 3: bottom right</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

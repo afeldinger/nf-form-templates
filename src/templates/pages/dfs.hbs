@@ -120,7 +120,7 @@ key: dfs
 				<span class="label">Barnets navn</span>
 				<input id="child-{{add this 1}}-name" name="child_{{add this 1}}_name" type="text" class="input-text">
 			</label>
-			
+			<!--
 			<label for="child-{{add this 1}}-year" class="field-wrapper field-wrapper-select">
 				<select id="child-{{add this 1}}-year" name="child_{{add this 1}}_year">
 					<option value="">Fødselsår</option>
@@ -128,7 +128,12 @@ key: dfs
 					<option value="{{subtract 2015 this}}">{{subtract 2015 this}}</option>
 				{{/times}}
 				</select>
+			</label>-->
+			<label for="child-{{add this 1}}-date" class="field-wrapper field-wrapper-text">
+				<span class="label">Fødselsdato</span>
+				<input id="child-{{add this 1}}-date" name="child_{{add this 1}}_date" type="text" class="input-date">
 			</label>
+
 		</div>
 	{{/times}}
 

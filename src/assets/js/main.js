@@ -28,13 +28,10 @@
 	$(':input').focus(function() {
 		$(this).parents('label').addClass('focus');
 	}).blur(function() {
-		$(this).parents('label')
-			.removeClass('focus')
-			.toggleClass('has-value', $(this).val()!=='')
-		;
-	}).each(function() {
+		$(this).parents('label').removeClass('focus');
+	}).on('blur change', function() {
 		$(this).parents('label').toggleClass('has-value', $(this).val()!=='');
-	});
+	}).trigger('change');
 
 	$('select').selectric({
 		disableOnMobile: false,
@@ -62,6 +59,17 @@
 		});
 
 	}).trigger('change');
+
+	$('.input-date').datepicker({
+	    format: 'yyyy-mm-dd',
+	    //orientation: 'auto left',
+	    autoclose: true,
+	    language: 'da'
+	}).on('changeDate', function(ev) {
+			$(ev.currentTarget).trigger('blur');
+
+	});
+
 
 
 
