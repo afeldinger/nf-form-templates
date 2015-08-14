@@ -200,7 +200,8 @@
 .input-error {
 	
 	input,
-	textarea {
+	textarea,
+	.selectric {
 		background-color: $color-error-bg;
 	}
 

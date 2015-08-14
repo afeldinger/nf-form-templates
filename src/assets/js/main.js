@@ -37,6 +37,8 @@
 		disableOnMobile: false,
 		responsive: true,
 		//inheritOriginalWidth: true,
+	}).on('change', function() {
+		$(this).valid();
 	});
 
 	$('select#children').on('change', function() {
@@ -85,6 +87,7 @@
 
 
 	$('form').validate({
+		ignore: [],
 		highlight: function(element, errorClass, validClass) {
             if(element.type === 'radio') {
                 $(element.form).find('[name="' + element.name + '"]').each(function(){
@@ -117,6 +120,8 @@
 				//error.insertAfter("#requestorPhoneLast");
 
 				error.insertAfter($(':radio[name=' + element.attr('name') + ']:last').closest('label'));
+			} else if (element.is('select')) {
+				error.appendTo(element.closest('.selectric-wrapper'));
 			} else {
 				error.insertAfter(element);
 			}

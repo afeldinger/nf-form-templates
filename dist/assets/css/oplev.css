@@ -870,7 +870,7 @@ button {
   button:hover {
     background-color: #c5e1a4; }
 
-.input-error input, .input-error textarea {
+.input-error input, .input-error textarea, .input-error .selectric {
   background-color: #ffb1b1; }
 .input-error.field-wrapper-radio:before, .input-error.field-wrapper-checkbox:before {
   background-color: #ffb1b1; }
