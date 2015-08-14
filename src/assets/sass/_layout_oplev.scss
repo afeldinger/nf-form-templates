@@ -1,0 +1,90 @@
+html {
+	color: $color-txt-2;
+}
+
+.page-header {
+	border-top: 3px solid #000;
+	background: $color-bg-header;
+	padding:42px 0 22px;
+
+
+	.header-logo {
+		text-align: center;
+		img {
+			display:inline-block;
+		}
+	}
+	
+}
+
+.main-content {
+	background: $color-bg-2;
+	margin-top:20px;
+	overflow:hidden;
+
+	@include rem(padding, 20px);
+
+	@media (min-width: $bp-sm) {
+		@include rem(padding, 20px);
+	}
+}
+
+.content-section {
+
+	@include rem(margin-bottom, 20px);
+
+	&:first-child {
+		@include rem(margin-top, 0px);
+	}
+	&:last-child {
+		@include rem(margin-bottom, 0px);
+	}
+
+	&.content-header {
+		@include rem(margin-bottom, 20px);
+	}
+	&.content-footer {
+		@include rem(margin-top, 20px);
+	}
+}
+
+small,
+.small {
+	color: $color-txt-2;
+}
+
+
+@media (min-width: $bp-md) {
+	
+	.content-header,
+	.content-footer {
+		
+		float:left;
+		clear:both;
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+button {
+	text-transform: uppercase;
+	color: $color-txt-1;
+	font-size: $size-md;
+	line-height: 1.4em;
+
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		display: inline-block;
+		content: '\232a';
+		width: 18px;
+		height: 18px;
+		font-size:.8em;
+		margin-left: 6px;
+		overflow: hidden;
+		vertical-align: top;
+	}
+}

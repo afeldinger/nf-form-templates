@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Oplev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <link rel="stylesheet" href="assets/css/oplev.min.css">
+        <script src="assets/js/init.min.js"></script>
+    </head>
+    <body>
+        <form>
+            <input type="hidden" name="email_address_">
+            <header class="page-header">
+                <h1>
+                    <span class="header-logo">
+                        <img class="logo" src="assets/img/oplev_logo.png" alt="Oplev">
+                    </span>
+                    <span class="header-name">Oplev
+                        <span>
+                </h1>
+            </header>
+            <section class="hero">
+            </section>
+            <section class="center-box">
+                <h1>Hvem er manden bag de berømte Olsen Banden film, som er indbegrebet af den danske filmskat?</h1>
+                <div class="field-group inline-elements">
+                    <label for="q1a1" class="field-wrapper field-wrapper-radio">
+                        <input id="q1a1" name="q1" type="radio" class="input-radio" required>
+                        <span class="label">Carl Ottosen</span>
+                    </label>
+                    <label for="q1a2" class="field-wrapper field-wrapper-radio">
+                        <input id="q1a2" name="q1" type="radio" class="input-radio" required>
+                        <span class="label">Erik Balling</span>
+                    </label>
+                    <label for="q1a3" class="field-wrapper field-wrapper-radio">
+                        <input id="q1a3" name="q1" type="radio" class="input-radio" required>
+                        <span class="label">Ib Mossin</span>
+                    </label>
+                </div>
+            </section>
+            <section class="main-content">
+                <header class="content-section content-header">
+                    <p>
+                        <strong>Content header </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </header>
+                <section class="content-section content-section-1">
+                    <h3>Dine oplysninger</h3>
+                    <label for="first-name" class="field-wrapper field-wrapper-text">
+                        <span class="label">Fornavn</span>
+                        <input id="first-name" name="firstname" type="text" class="input-text" required>
+                    </label>
+                    <label for="last-name" class="field-wrapper field-wrapper-text">
+                        <span class="label">Efternavn</span>
+                        <input id="last-name" name="lastname" type="text" class="input-text" required>
+                    </label>
+                    <label for="email" class="field-wrapper field-wrapper-text">
+                        <span class="label">E-mail</span>
+                        <input id="email" name="email_address_" type="text" class="input-text" required>
+                    </label>
+                    <label for="birthday" class="field-wrapper field-wrapper-text">
+                        <span class="label">Fødselsdato</span>
+                        <input id="birthday" name="date_of_birth" type="text" class="input-date">
+                    </label>
+                    <label for="gender" class="field-wrapper field-wrapper-select">
+                        <select id="gender" name="gender_">
+                            <option value="">Køn</option>
+                            <option value="m">Mand</option>
+                            <option value="k">Kvinde</option>
+                        </select>
+                    </label>
+                </section>
+                <section class="content-section content-section-2">
+                    <h3>Din adresse</h3>
+                    <label for="address" class="field-wrapper field-wrapper-text">
+                        <span class="label">Adresse</span>
+                        <input id="address" name="postal_street_1_" type="text" class="input-text" required>
+                    </label>
+                    <label for="postal-code" class="field-wrapper field-wrapper-text">
+                        <span class="label">Postnr.</span>
+                        <input id="postal-code" name="postal_code_" type="text" class="input-text" required>
+                    </label>
+                    <label for="city" class="field-wrapper field-wrapper-text">
+                        <span class="label">By</span>
+                        <input id="city" name="city_" type="text" class="input-text" required>
+                    </label>
+                    <input type="hidden" name="country_" value="dk">
+                    <!--
+		<label for="country" class="field-wrapper field-wrapper-select">
+			<select id="country" name="country_">
+				<option value="">Land</option>
+				<option value="dk">Danmark</option>
+				<option value="se">Sverige</option>
+				<option value="no">Norge</option>
+			</select>
+		</label>
+		-->
+                    <p class="small">
+                        <strong>Section 3: bottom right</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button type="submit" class="input-button">Svar og tilmeld</button>
+                </section>
+                <footer class="content-section content-footer">
+                    <h2>
+                        Content footer
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </footer>
+            </section>
+            <footer class="page-footer">
+                <button type="submit" class="input-button">Svar og tilmeld</button>
+            </footer>
+        </form>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+        window.jQuery || document.write('<script src="assets/js/libs/jquery-1.11.1.min.js"><\/script>')
+        </script>
+        <script src="assets/js/scripts.min.js"></script>
+        <script src="assets/js/libs/jquery-validate/localization/messages_da.min.js"></script>
+    </body>
+</html>
