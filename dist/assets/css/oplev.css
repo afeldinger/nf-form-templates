@@ -1065,6 +1065,7 @@ html {
 .main-content {
   background: #fff;
   margin-top: 20px;
+  margin-top: 1.25rem;
   overflow: hidden;
   padding: 20px;
   padding: 1.25rem; }
@@ -1092,14 +1093,6 @@ html {
 small, .small {
   color: #666; }
 
-@media (min-width: 40em) {
-  .content-header, .content-footer {
-    float: left;
-    clear: both;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0; } }
-
 button {
   text-transform: uppercase;
   color: #000;
@@ -1116,3 +1109,14 @@ button {
     margin-left: 6px;
     overflow: hidden;
     vertical-align: top; }
+
+@media (min-width: 40em) {
+  .main-content {
+    margin-top: 50px;
+    margin-top: 3.12rem; }
+  .content-header, .content-footer {
+    float: left;
+    clear: both;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0; } }

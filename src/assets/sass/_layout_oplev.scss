@@ -19,7 +19,7 @@ html {
 
 .main-content {
 	background: $color-bg-2;
-	margin-top:20px;
+	@include rem(margin-top, 20px);
 	overflow:hidden;
 
 	@include rem(padding, 20px);
@@ -54,18 +54,6 @@ small,
 }
 
 
-@media (min-width: $bp-md) {
-	
-	.content-header,
-	.content-footer {
-		
-		float:left;
-		clear:both;
-		max-width: none;
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
 
 button {
 	text-transform: uppercase;
@@ -86,5 +74,22 @@ button {
 		margin-left: 6px;
 		overflow: hidden;
 		vertical-align: top;
+	}
+}
+
+
+@media (min-width: $bp-md) {
+	.main-content {
+		@include rem(margin-top, 50px);
+	}
+	
+	.content-header,
+	.content-footer {
+		
+		float:left;
+		clear:both;
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
