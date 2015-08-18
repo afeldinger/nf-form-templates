@@ -85,6 +85,7 @@
 
 .main-content {
 	margin: 0 auto $margin-v;
+	@include rem(margin-top, 20px);
 	padding: 0;
 	@include rem(padding-left, 20px);
 	@include rem(padding-right, 20px);
@@ -103,10 +104,6 @@
 .content-section {
 
 	@include rem(margin-bottom, 20px);
-	
-	&:first-child {
-		@include rem(margin-top, 20px);
-	}
 
 	> :first-child {
 		margin-top: 0;
@@ -166,14 +163,11 @@
 }
 
 @media (min-width: $bp-md) {
-	
+	.main-content {
+		@include rem(margin-top, 50px);
+	}
 	.content-section {
-
 		@include rem(margin-bottom, 50px);
-		
-		&:first-child {
-			@include rem(margin-top, 50px);
-		}
 	}
 
 	.content-header,

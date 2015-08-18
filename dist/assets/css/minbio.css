@@ -969,6 +969,8 @@ label.error {
 
 .main-content {
   margin: 0 auto 2rem;
+  margin-top: 20px;
+  margin-top: 1.25rem;
   padding: 0;
   padding-left: 20px;
   padding-left: 1.25rem;
@@ -987,9 +989,6 @@ label.error {
 .content-section {
   margin-bottom: 20px;
   margin-bottom: 1.25rem; }
-  .content-section:first-child {
-    margin-top: 20px;
-    margin-top: 1.25rem; }
   .content-section > :first-child {
     margin-top: 0; }
   .content-section > :last-child {
@@ -1035,12 +1034,12 @@ label.error {
       margin-bottom: 0; }
 
 @media (min-width: 40em) {
+  .main-content {
+    margin-top: 50px;
+    margin-top: 3.12rem; }
   .content-section {
     margin-bottom: 50px;
     margin-bottom: 3.12rem; }
-    .content-section:first-child {
-      margin-top: 50px;
-      margin-top: 3.12rem; }
   .content-header, .content-footer {
     clear: both;
     float: none;
