@@ -9,6 +9,16 @@
     	}
     });
 
+	// control hover states
+	$('label').hover(
+		function() {
+			$(this).addClass('over');
+		}, 
+		function() {
+			$(this).removeClass('over');
+		}
+	).filter(':has(.icon)').addClass('has-icon');
+
 	// control checkboxes and radiobuttons
 	$('input[type=radio], input[type=checkbox]').each(function() {
 
@@ -33,14 +43,18 @@
 		$(this).parents('label').toggleClass('has-value', $(this).val()!=='');
 	}).trigger('change');
 
-	$('select').selectric({
-		disableOnMobile: false,
-		responsive: true,
-		//inheritOriginalWidth: true,
-	}).on('change', function() {
-		$(this).valid();
+	// add datepicker functionality
+	$('.input-date').datepicker({
+	    format: 'yyyy-mm-dd',
+	    //orientation: 'auto left',
+	    autoclose: true,
+	    startView: 2,
+	    language: 'da'
+	}).on('changeDate', function(ev) {
+		$(ev.currentTarget).trigger('blur');
 	});
 
+	// toggle child info visibility
 	$('select#children').on('change', function() {
 		var child_count = $(this).val() || 0;
 		var $children = $(':input[id ^= "child-"]');
@@ -62,27 +76,16 @@
 
 	}).trigger('change');
 
-	$('.input-date').datepicker({
-	    format: 'yyyy-mm-dd',
-	    //orientation: 'auto left',
-	    autoclose: true,
-	    startView: 2,
-	    language: 'da'
-	}).on('changeDate', function(ev) {
-		$(ev.currentTarget).trigger('blur');
+	// enable selectric for styling select boxes
+	$('select').selectric({
+		disableOnMobile: false,
+		responsive: true,
+		//inheritOriginalWidth: true,
+	}).on('change', function() {
+		$(this).valid();
 	});
 
 
-
-
-	$('label').hover(
-		function() {
-			$(this).addClass('over');
-		}, 
-		function() {
-			$(this).removeClass('over');
-		}
-	).filter(':has(.icon)').addClass('has-icon');
 
 
 	$('form').validate({
@@ -112,7 +115,6 @@
 				$(element).closest('label').removeClass('input-' + errorClass);
 			}
 		},
-
 		errorPlacement: function(error, element) {
 			if (element.is(':radio')) {
 				//if (element.attr("name") == "PhoneFirst" || element.attr("name") == "PhoneMiddle" || element.attr("name") == "PhoneLast") {
@@ -125,14 +127,8 @@
 				error.insertAfter(element);
 			}
 		},
-
-		/*
-		submitHandler: function() {
-
-		},
-		*/
 	});
-	
+
 	// add rules for member get member
 	$(':text[name^="mgm"]').each(function() {
 		var $name_parts = $(this).attr('name').split('_');
