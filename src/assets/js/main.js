@@ -69,8 +69,7 @@
 	    startView: 2,
 	    language: 'da'
 	}).on('changeDate', function(ev) {
-			$(ev.currentTarget).trigger('blur');
-
+		$(ev.currentTarget).trigger('blur');
 	});
 
 
@@ -133,4 +132,24 @@
 		},
 		*/
 	});
+	
+	// add rules for member get member
+	$(':text[name^="mgm"]').each(function() {
+		var $name_parts = $(this).attr('name').split('_');
+		var $field_partner = $(':text[name="' + $name_parts[0] + '_' + ($name_parts[1]==='name'? 'email_address_' : 'name') + '"]');
+
+		if ($name_parts[0] !== 'mgm1' && $field_partner.length > 0) {
+			$(this).rules('add', {
+				required: {
+					depends: function() {
+						return $field_partner.val() !== '';
+					}
+				}
+			});
+		}
+	});
+
+
+
+
 })();
