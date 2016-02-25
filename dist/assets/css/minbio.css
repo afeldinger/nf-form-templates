@@ -418,6 +418,9 @@ small, .small {
   font-size: 0.75rem;
   line-height: 1.38em; }
 
+a {
+  color: inherit; }
+
 .selectric-wrapper {
   position: relative;
   cursor: pointer; }
@@ -911,6 +914,11 @@ label.error {
       margin-left: -100%;
       clear: right; }
 
+.collapsed {
+  display: none; }
+  .collapsed:target {
+    display: block; }
+
 .page-header h1 {
   margin: 0;
   padding: 0; }
@@ -1086,7 +1094,7 @@ label.error {
   border-style: solid;
   border-width: 20px;
   border-radius: 20px;
-  border-image: url(../img/minbio_border.png) 20 round;
+  border-image: url(http://static.cdn.responsys.net/i5/responsysimages/content/nfdirect/form_templates_minbio_border.png) 20 round;
   overflow: hidden; }
   @media (max-width: 40em) {
     .hero + .center-box {

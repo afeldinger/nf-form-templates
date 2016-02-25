@@ -406,6 +406,9 @@ small, .small {
   font-size: 0.75rem;
   line-height: 1.38em; }
 
+a {
+  color: inherit; }
+
 .selectric-wrapper {
   position: relative;
   cursor: pointer; }
@@ -898,6 +901,11 @@ label.error {
       float: right;
       margin-left: -100%;
       clear: right; }
+
+.collapsed {
+  display: none; }
+  .collapsed:target {
+    display: block; }
 
 .page-header h1 {
   margin: 0;
