@@ -1,13 +1,15 @@
 html {
 	color: $color-txt-2;
 }
+body {
+	background-image: url(http://www.nfbio.dk/sites/all/themes/bio_basic/images/body-bg.jpg);
+	background-position: 50% 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
 
 .page-header {
-	border-top: 3px solid #000;
-	background: $color-bg-header;
-	padding:42px 0 22px;
-
-
+	margin-top: $margin-v;
 	.header-logo {
 		text-align: center;
 		img {
@@ -56,23 +58,12 @@ small,
 
 button {
 	text-transform: uppercase;
-	color: $color-txt-1;
 	font-size: $size-md;
 	line-height: 1.4em;
 
-	&:before {
-		display: none;
-	}
-
+	&:before,
 	&:after {
-		display: inline-block;
-		content: '\232a';
-		width: 18px;
-		height: 18px;
-		font-size:.8em;
-		margin-left: 6px;
-		overflow: hidden;
-		vertical-align: top;
+		display: none;
 	}
 }
 

@@ -1,3 +1,4 @@
+/* Clearfixes */
 /*! normalize.css v3.0.2 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -345,6 +346,16 @@ img {
   max-width: 100%;
   border: 0; }
 
+.iframe-wrapper {
+  position: relative;
+  max-width: 100%; }
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 *, *:before, *:after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -373,7 +384,7 @@ h1 {
       font-size: 1.75rem; } }
 
 h2 {
-  margin: .4em 0 .2em;
+  margin: .8em 0 .2em;
   font-size: 20px;
   font-size: 1.25rem;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -408,6 +419,9 @@ small, .small {
 
 a {
   color: inherit; }
+
+.center {
+  text-align: center; }
 
 .selectric-wrapper {
   position: relative;
@@ -743,7 +757,7 @@ a {
 .field-wrapper {
   position: relative;
   display: block;
-  margin-top: 12px; }
+  margin-top: 21.6px; }
   .field-wrapper:first-of-type {
     margin-top: 0; }
   .field-wrapper input, .field-wrapper textarea, .field-wrapper .label {
@@ -752,6 +766,8 @@ a {
   .field-wrapper .label {
     display: block;
     text-align: left; }
+  .field-wrapper .label + .field-group {
+    margin-top: .8em; }
 
 .inline-elements {
   display: inline-block;
@@ -767,6 +783,33 @@ a {
           margin-left: 0; }
         .inline-elements .field-wrapper:last-of-type {
           margin-right: 0; } }
+  .inline-elements .label + .field-group {
+    margin-top: .8em; }
+
+.compact-elements .field-wrapper {
+  margin-top: 12px; }
+  .compact-elements .field-wrapper:first-of-type {
+    margin-top: 0; }
+
+.cols {
+  display: block; }
+  .cols .col {
+    display: block; }
+  .cols .col + .col {
+    margin-top: 2em; }
+  @media (min-width: 40em) {
+    .cols {
+      overflow: hidden; }
+      .cols .col {
+        display: inline;
+        float: left;
+        clear: left;
+        width: 48%; }
+        .cols .col:nth-of-type(2n+2) {
+          float: right;
+          clear: right; }
+      .cols .col + .col {
+        margin-top: 0; } }
 
 .field-wrapper-text input, .field-wrapper-textarea input, .field-wrapper-text textarea, .field-wrapper-textarea textarea {
   width: 100%;
@@ -794,6 +837,8 @@ a {
 
 .field-wrapper-select select {
   width: 100%; }
+.field-wrapper-select .label + select, .field-wrapper-select .label + .selectric-wrapper {
+  margin-top: 4px; }
 
 .field-wrapper-radio, .field-wrapper-checkbox {
   cursor: pointer; }
@@ -879,7 +924,8 @@ button {
   background-color: #ffb1b1; }
 
 label.error {
-  display: block; }
+  display: block;
+  color: #b2d785; }
   .field-group label.error {
     margin-top: 12px; }
 
@@ -1073,9 +1119,13 @@ html {
   background: #fff;
   margin-top: 20px;
   margin-top: 1.25rem;
-  overflow: hidden;
   padding: 20px;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  *zoom: 1; }
+  .main-content:after {
+    content: "";
+    display: table;
+    clear: both; }
   @media (min-width: 25em) {
     .main-content {
       padding: 20px;

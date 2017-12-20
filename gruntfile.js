@@ -321,6 +321,21 @@ module.exports = function(grunt) {
     },
 
 
+    uglify: {
+      manual_js: {
+        files: [
+          {
+            expand: true, 
+            cwd: 'src/assets/js/', 
+            src: [
+              'nf_segments.js',
+            ],
+            dest: 'dist/assets/js/',
+          }
+        ]
+      }
+    },
+
     replace: {
       dist: {
         options: {

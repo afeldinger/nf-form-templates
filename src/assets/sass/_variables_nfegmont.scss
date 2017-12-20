@@ -1,0 +1,91 @@
+
+// Fonts
+@font-face {
+    font-family: "nf-avenir"; // "avenir"
+    src: url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir.otf?ie-fix) format("opentype"), url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nf-avenir"; // "avenir-medium"
+    src: url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-medium.otf?ie-fix) format("opentype"), url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nf-avenir"; // "avenir-bold"
+    src: url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-bold.otf?ie-fix) format("opentype"), url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nf-avenir"; // "avenir-italic"
+    src: url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-italic.otf?ie-fix) format("opentype"), url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-italic.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "nf-avenir"; // "avenir-bold-italic"
+    src: url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-bold-italic.otf?ie-fix) format("opentype"), url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-bold-italic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "nf-avenir"; // "avenir-demi"
+    src: url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-demi.otf?ie-fix) format("opentype"), url(http://www.nfbio.dk/sites/all/themes/bio_basic/css/fonts/avenir-demi.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+// Typography:
+
+$font-stack-helvetica: 'nf-avenir', Helvetica, Arial, sans-serif;
+$font-header: $font-stack-helvetica;
+$font-body: $font-stack-helvetica;
+
+$size-xxl: 28px;
+$size-xl: 20px;
+$size-lg: 16px;
+$size-md: 14px;
+$size-sm: 12px;
+$size-xs: 10px;
+
+// Grid
+
+$border-radius-md: 3px;
+$border-radius-sm: 2px;
+
+// Colors
+$color-bg-main: #050607;
+$color-bg-2: #fff;
+
+$color-txt-1: #000;
+$color-txt-2: #666;
+
+$color-txt-header: $color-txt-1;
+$color-txt-main: $color-txt-2;
+$color-txt-field: #4d4d4d;
+
+$color-alt: #952122;
+$color-alt-active: lighten($color-alt, 8%);
+
+$color-bg-header: #fff;
+
+$color-button: #fff;
+
+$color-error-bg: #ffb1b1;
+$color-error: $color-alt;
+
+
+// Forms
+$field-border: 1px solid #ccc;
+$color-checkbox-bg: #952122;
+$color-checkbox-txt: #fff;
+

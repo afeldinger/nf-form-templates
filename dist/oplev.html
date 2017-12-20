@@ -103,5 +103,14 @@
         </script>
         <script src="assets/js/scripts.min.js"></script>
         <script src="assets/js/libs/jquery-validate/localization/messages_da.min.js"></script>
+        <script>
+        if (load_js)
+        {
+            for (var i = 0; i < load_js.length; i++)
+            {
+                document.write("<script src='" + load_js[i] + "'><\/script>");
+            }
+        }
+        </script>
     </body>
 </html>

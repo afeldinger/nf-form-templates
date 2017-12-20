@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-	margin: .4em 0 .2em;
+	margin: .8em 0 .2em;
 	@include rem(font-size, $size-xl);
 	font-family: $font-header;
 	font-weight: $weight-bold;
@@ -81,4 +81,8 @@ small,
 
 a {
 	color: inherit;
+}
+
+.center {
+	text-align: center;
 }

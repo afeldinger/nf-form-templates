@@ -5,7 +5,7 @@
 .field-wrapper {
 	position:relative;
 	display:block;
-	margin-top: $form-spacing;
+	margin-top: 1.8 * $form-spacing;
 
 	&:first-of-type {
 		margin-top: 0;
@@ -23,9 +23,11 @@
 		text-align: left;
 	}
 
+	.label + .field-group {
+		margin-top: .8em;
+	}
+
 }
-
-
 
 .inline-elements {
 	display: inline-block;
@@ -47,6 +49,55 @@
 			&:last-of-type {
 				margin-right: 0;
 			}
+		}
+	}
+
+
+	.label + .field-group {
+		margin-top: .8em;
+	}
+}
+
+.compact-elements {
+	.field-wrapper {
+		margin-top: $form-spacing;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+	}
+}
+
+.cols {
+	display:block;
+
+	.col {
+		display: block;
+	}
+	.col + .col {
+		margin-top: 2em;
+	}
+
+
+	@media (min-width: $bp-md) {
+
+		overflow: hidden;
+
+		.col {
+			display:inline;
+			float:left;
+			clear:left;
+			width:48%;
+
+			&:nth-of-type(2n+2) {
+				float:right;
+				clear:right;
+			}
+		}
+
+		.col + .col {
+			margin-top: 0;
 		}
 	}
 }
@@ -98,6 +149,11 @@
 	select {
 		width: 100%;
 	}
+
+	.label + select,
+	.label + .selectric-wrapper {
+		margin-top: 4px;
+	}
 }
 
 .field-wrapper-radio,
@@ -111,9 +167,9 @@
 		}
 
 		.label {
-
 			@include rem(padding-left, $checkbox-md + $checkbox-margin);
 		}
+
 
 		&:before {
 			content: ' ';
@@ -216,6 +272,7 @@
 
 label.error {
 	display:block;
+	color: $color-error;
 
 	.field-group & {
 		margin-top: $form-spacing;

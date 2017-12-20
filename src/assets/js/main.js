@@ -91,7 +91,7 @@
 	$('form').validate({
 		ignore: [],
 		highlight: function(element, errorClass, validClass) {
-            if(element.type === 'radio') {
+            if(element.type === 'radio' || element.type === 'checkbox') {
                 $(element.form).find('[name="' + element.name + '"]').each(function(){
                     var $this = $(this);
                     $this.addClass(errorClass).removeClass(validClass);
@@ -104,7 +104,7 @@
 
 		},
 		unhighlight: function(element, errorClass, validClass) {
-            if(element.type === 'radio') {
+            if(element.type === 'radio' || element.type === 'checkbox') {
                 $(element.form).find('[name="' + element.name + '"]').each(function(){
                     var $this = $(this);
                     $this.removeClass(errorClass).addClass(validClass);
@@ -116,11 +116,11 @@
 			}
 		},
 		errorPlacement: function(error, element) {
-			if (element.is(':radio')) {
+			if (element.is(':radio') || element.is(':checkbox')) {
 				//if (element.attr("name") == "PhoneFirst" || element.attr("name") == "PhoneMiddle" || element.attr("name") == "PhoneLast") {
 				//error.insertAfter("#requestorPhoneLast");
 
-				error.insertAfter($(':radio[name=' + element.attr('name') + ']:last').closest('label'));
+				error.insertAfter($(':input[name=' + element.attr('name') + ']:last').closest('label'));
 			} else if (element.is('select')) {
 				error.appendTo(element.closest('.selectric-wrapper'));
 			} else {
